@@ -162,7 +162,7 @@ main {
 }
 
 .player--winner {
-  background-color: hsl(111, 69%, 70%);
+  background-color: hsla(111, 69%, 70%, 0.658);
 }
 
 .player--winner .name {
