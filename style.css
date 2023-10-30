@@ -25,8 +25,8 @@ body {
 /* LAYOUT */
 main {
   position: relative;
-  width: 100rem;
-  height: 60rem;
+  width: 95%;
+  height: 95%;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
@@ -38,7 +38,7 @@ main {
 
 .player {
   flex: 50%;
-  padding: 9rem;
+  padding: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,12 +48,12 @@ main {
 /* ELEMENTS */
 .name {
   position: relative;
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 300;
-  margin-bottom: 1rem;
+  margin: 8%;
 }
 
 .score {
@@ -108,7 +108,7 @@ main {
   background: none;
   border: none;
   font-family: inherit;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 500;
@@ -118,28 +118,29 @@ main {
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
 
-  padding: 0.7rem 2.5rem;
-  border-radius: 9px;
+  padding: 0.3rem 1.5rem;
+  border-radius: 15px;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
 .btn::first-letter {
-  font-size: 2.4rem;
+  font-size: 2rem;
   display: inline-block;
   margin-right: 0.7rem;
 }
 
-.btn--new {
-  top: 32rem;
-}
 .btn--goal {
-  top: 3rem;
+  top: 8%;
 }
+.btn--new {
+  top: 60%;
+}
+
 .btn--roll {
-  top: 39rem;
+  top: 74%;
 }
 .btn--hold {
-  top: 46rem;
+  top: 88%;
 }
 
 .btn:active {
@@ -154,7 +155,7 @@ main {
 .dice {
   position: absolute;
   left: 50%;
-  top: 17.5rem;
+  top: 30%;
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(6, 80, 3, 0.2);
@@ -222,4 +223,71 @@ p {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5;
+}
+
+/* for portrait mode */
+@media only screen and (max-width: 600px) {
+  .btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #444;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+
+    padding: 0.3rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  }
+
+  .btn::first-letter {
+    font-size: 2rem;
+    display: inline-block;
+    margin-right: 0.7rem;
+  }
+  .btn--goal {
+    top: 25%;
+  }
+  .btn--new {
+    top: 55%;
+  }
+
+  .btn--roll {
+    top: 63%;
+  }
+  .btn--hold {
+    top: 71%;
+  }
+
+  main {
+    position: relative;
+    width: 95%;
+    height: 75%;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(200px);
+    filter: blur();
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .dice {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translateX(-50%);
+    height: 12rem;
+    box-shadow: 0 2rem 5rem rgba(6, 80, 3, 0.2);
+  }
 }
